@@ -1,0 +1,12 @@
+function Extension($field){
+    $ext = "";
+        if (($_FILES['pic']['name'])!="") {
+        $ext = pathinfo($_FILES['pic']['name']);
+        $ext = $ext['extension'];
+        if ($ext != "jpg" && $ext != "png" && $ext != "jpeg" && $ext != "gif}") {
+
+            $ext = "";
+        }
+    }
+    return $ext;
+}
